@@ -1,0 +1,142 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body,html{
+	height:100%;
+	width: 100%;
+	overflow-x: hidden;
+	background-color: black;
+}
+.landing-page{
+	background:
+		linear-gradient(135deg,#05050980 10%,#f5f5f51a), url('images/flock1.jpg');
+	background-position: center;
+	background-size: 100%;
+	background-attachment: fixed;
+	position: relative;
+	height: 100%;
+	transition: linear 0.5s;
+}
+.landing-page #overlay{
+	height: 100%;
+	background-color: transparent;
+	transition: linear 0.5s;
+}
+.landing-page .banner{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	opacity: 1;
+	transition: linear 0.8s;
+}
+.landing-page .banner h3{
+	font-size: 5vw;
+	width: 90%;
+	color: white;
+	font-weight: bolder;
+	text-shadow: 0 0 15px #000;
+	letter-spacing: 1.5px;
+}
+.landing-page .banner h1{
+	font-size: 9vw;
+	width: 90%;
+	color: white;
+	font-weight: bolder;
+	text-shadow: 0 0 15px #000;
+}
+.landing-page .banner #btn-simulate{
+	width: 200px;
+	height: 60px;
+	background-color: #b90041;
+	border-radius: 5px;
+	border:none;
+	color: white;
+	font-size: 20px;
+	cursor: pointer;
+	font-family: segoe script;
+	font-weight: bolder;
+}
+.landing-page .banner #btn-simulate:hover{
+	box-shadow: 0 0 10px 1px #000;
+	animation-name: btn-dance;
+	animation-duration: 1s;
+}
+.pso-wrapper{
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow-x: hidden;
+	display: none;
+	opacity: 0;
+	transition: linear 0.8s;
+}
+.pso-wrapper #swarmarea{
+	border:5px solid white;
+	position: relative;
+	top: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.pso-wrapper #btn-pso,#btn-setval{
+	position: relative;
+	top: 30px;
+	height: 50px;
+	width: 130px;
+	font-size: 16px;
+	font-family: segoe script;
+	margin-left: 20px;
+	border-radius: 5px;
+	border:none;
+	cursor: pointer;
+	font-weight: bolder;
+	color:white;
+	background-color: #2d3ac5;
+}
+@keyframes btn-dance
+{
+    0%
+    {
+        transform: rotateZ(0deg);
+        transform-origin: left;
+    }
+    20%
+    {
+        transform: rotateZ(9deg);
+        transform-origin: right;
+    }
+    40%
+    {
+        transform: rotateZ(-9deg);
+        transform-origin: left;
+    }
+    60%
+    {
+        transform: rotateZ(7deg);
+        transform-origin: right;
+    }
+    70%
+    {
+        transform: rotateZ(-7deg);
+        transform-origin: left;
+    }
+    80%
+    {
+        transform: rotateZ(4deg);
+        transform-origin: right;
+    }
+    90%
+    {
+        transform: rotateZ(-4deg);
+        transform-origin: left;
+    }
+    100%
+    {
+        transform: rotateZ(0deg);
+        transform-origin: right;
+
+    }
+}

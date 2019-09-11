@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PSO Simulation</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="pso.css">
+	</head>
+	<body >
+		<div class="landing-page" id="landing-page">
+			<div id="overlay">
+				<div class="banner" id='banner'>
+					<center>
+						<h3>Simulating</h3><h1>Particle Swarm Optimization</h1>
+						<button id="btn-simulate" onclick="background_disappear();">Simulate</button>
+					</center>
+				</div>
+			</div>
+		</div>
+		<div class="pso-wrapper" id="pso-wrapper">
+			<div class="result-area">
+				<h5>Iterations</h5>
+			</div>
+			<canvas id="swarmarea"></canvas>
+			<center>
+				<button id='btn-pso' onclick="initMethod();">Set Particles</button>
+				<button id='btn-setval' onclick="psoMethod();">Start PSO</button></center>
+			<script type="text/javascript" src="pso.js"></script>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var background_disappear=() => {
+			var landing_page=document.getElementById('landing-page');
+			var overlay=document.getElementById('overlay');
+			var banner=document.getElementById('banner');
+			landing_page.style.backgroundSize='400%';
+			overlay.style.backgroundColor='black';
+			banner.style.opacity='0';
+			setTimeout(() => {
+				landing_page.style.display='none';
+				var pso_wrapper=document.getElementById('pso-wrapper');
+				pso_wrapper.style.display='block';
+				setTimeout(() => {
+					pso_wrapper.style.transition='linear 0.8s';
+					pso_wrapper.style.opacity='1';
+				},100);				
+			},1000);
+		}
+	</script>
+</html>
